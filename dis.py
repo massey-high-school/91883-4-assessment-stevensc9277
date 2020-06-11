@@ -25,7 +25,7 @@ def ans_check():
     print("That is correct!")
     print()
   else:
-    print("That was not expected, so I won't count that. Here's an extra question: ")
+    print("That was not expected, so I won't count that. Here's an extra question 😁: ")
 
 total_score = 5
 
