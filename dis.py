@@ -34,11 +34,13 @@ total_score = 5
 for item in range(0, 5):
   num_1 = random.randint(0, 10)
   num_2 = random.randint(0, 10)
-  num_3 = random.randint(0, 10)
-  print("{}x^2 + {}x + {} = 0".format(num_1, num_2, num_3))
+  num_3 = random.randint(2, 10)
+  equation = "{}x^2 + {}x + {} = 0".format(num_1, num_2, num_3)
+  print(equation.replace("1", ""))
+
   dis = math.pow(num_2, 2) - 4 * (num_1 * num_3)  
   answer = ans_check()
-  print("The discriminant was {:.0f}".format(dis))
+  print("The discriminant was {}".format(dis))
   print()
 
 print("You scored {:.0f}% ".format(total_score / 5 * 100))
