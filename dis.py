@@ -26,10 +26,8 @@ def ans_check():
     print()
   else:
     print()
-
+    
 total_score = 5
-
-
 
 for item in range(0, 5):
   num_1 = random.randint(0, 10)
