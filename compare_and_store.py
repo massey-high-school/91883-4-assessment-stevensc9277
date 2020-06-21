@@ -48,6 +48,5 @@ for item in range(0, max_question):
   print("The discriminant was {:.0f}".format(dis))
   print()
 
-print("You scored {:.0f}% ".format( (max_question - incorrect) / max_question * 100))
 print("You got these incorrect:")
 print("{}".format(wrong_list))
