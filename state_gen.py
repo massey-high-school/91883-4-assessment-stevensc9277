@@ -1,3 +1,5 @@
+# Program separates questions and makes it look better
+
 def math_statement(statement, char):
     print()
     print(char * len(statement))
