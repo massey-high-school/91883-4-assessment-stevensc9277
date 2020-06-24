@@ -78,12 +78,14 @@ def num_check(question, low=None, high=None):
 
 incorrect = 0
 wrong_list = []
-max_question = num_check("How many questions do you want to do?", 10, 50)
+start = 1
+# Get number of questions
+max_question = num_check("How many questions do you want to do? ", 10, 50)
 for item in range(0, max_question):
   num_1 = random.randint(0, 9)
   num_2 = random.randint(0, 9)
   num_3 = random.randint(2, 9)
-  rounds = math_statement("* Round {} of {} *".format(start, max_round), "*")
+  rounds = math_statement("* Question {} of {} *".format(start, max_question), "*")
   start += 1
   equation = "{}x^2 + {}x + {} = 0".format(num_1, num_2, num_3)
   print(equation.replace("1", ""))

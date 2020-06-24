@@ -1,2 +1,2 @@
 language = "python3"
-run = "python <name.py>"
+run = "python easy_test.py"
