@@ -36,5 +36,6 @@ def num_check(question, low=None, high=None):
             print(error)
             continue
 
+# Ask user for a number between 1 and 100, else loop
 num_1 = num_check("Enter a number: ", 1, 100)
 print("Clear")
