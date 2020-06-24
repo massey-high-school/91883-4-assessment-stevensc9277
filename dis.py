@@ -30,15 +30,21 @@ def ans_check():
 total_score = 5
 
 for item in range(0, 5):
+
+  # create random integers for a, b, c (num_1, 2 and 3)
   num_1 = random.randint(0, 10)
   num_2 = random.randint(0, 10)
   num_3 = random.randint(2, 10)
+  # display equation
   equation = "{}x^2 + {}x + {} = 0".format(num_1, num_2, num_3)
   print(equation.replace("1", ""))
 
+# Solve to find discriminant (hidden)
   dis = math.pow(num_2, 2) - 4 * (num_1 * num_3)  
   answer = ans_check()
+# print answer
   print("The discriminant was {}".format(dis))
   print()
 
+# print score as percentage
 print("You scored {:.0f}% ".format(total_score / 5 * 100))
