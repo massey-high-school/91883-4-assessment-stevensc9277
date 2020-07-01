@@ -1,2 +1,2 @@
 language = "python3"
-run = "python compare_and_store.py"
+run = "python dis_function.py"
