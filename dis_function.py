@@ -23,6 +23,7 @@ def ans_check(question, equal, lower, higher):
           return response
         else:
           print(error)
+          return response
       except ValueError:
         print(error)
       
