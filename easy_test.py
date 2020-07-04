@@ -134,4 +134,4 @@ else:
 print()
 # Print percentage of questions answered correctly
 print("You scored {:.0f}%".format(correct/max_question * 100))
-print("Thank you for finishing the test. Keep studying o(*^▽^*)┛")
+print("Thank you for finishing the test. Keep studying o(*^▽ ^*)┛")
