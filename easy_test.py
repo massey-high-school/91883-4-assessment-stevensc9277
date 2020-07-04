@@ -112,7 +112,7 @@ while start != max_question + 1:
   num_2 = random.randint(0, 9)
   num_3 = random.randint(2, 9)
   # Display round number and max
-  rounds = math_statement("* Question {} of {} *".format(start, max_question), "*")
+  rounds = math_statement("- Question {} of {} -".format(start, max_question), "-")
   # Display question to solve (find discriminant) but replace 1 with blank
   equation = "{}x^2 + {}x + {} = 0".format(num_1, num_2, num_3)
   print(equation.replace("1", ""))
@@ -126,7 +126,8 @@ correct = max_question - incorrect
 print("Finding incorrect questions. Please wait...")    # I only put this in because I thought it was cool
 time.sleep(2.5)
 if correct != max_question:
-  print("You got these incorrect:")
+  print("It seems that you got a few questions wrong...")
+  time.sleep(2)
   print()
   # Print incorrect questions
   show = zip(num_list, wrong_list, answer)
@@ -136,5 +137,5 @@ else:
   print("No incorrect questions found...👍")
 print()
 # Print percentage of questions answered correctly
-print("You scored {:.0f}%".format(correct/max_question * 100))
+score = math_statement("* You scored {:.0f}%  *".format(correct/max_question * 100), "*")
 print("Thank you for finishing the test. Keep studying o(*^▽ ^*)┛")
