@@ -106,7 +106,7 @@ print()
 max_question = num_check("How many questions do you want to do? ", 5, 50)
 # Ask user to get ready (For fun)
 print("Generating questions. Please get ready...")
-  time.sleep(3)
+time.sleep(3)
 while start != max_question + 1:
   num_1 = random.randint(0, 9)
   num_2 = random.randint(0, 9)
