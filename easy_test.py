@@ -121,7 +121,7 @@ while start != max_question + 1:
 # Find number of questions answered correctly
 correct = max_question - incorrect
 print("Finding incorrect questions. Please wait...")    # I only put this in because I thought it was cool
-time.sleep(5)
+time.sleep(2.5)
 if correct != max_question:
   print("You got these incorrect:")
   print()
