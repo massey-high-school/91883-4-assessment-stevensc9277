@@ -5,6 +5,7 @@
 # Change if needed
 import random
 import math 
+import time   # I thought this would look cool
 from textwrap3 import wrap
 
 # Statement generator
@@ -54,6 +55,7 @@ def num_check(question, low=None, high=None):
 def ans_check(question, equal, lower, higher):
   global incorrect    # Prevents the UnboundLocalError
   error = "That is incorrect"
+  display = "Discriminant was {:.0f}".format(dis)
   while True:
       try:
         response = input("What is the discriminant? ").lower()
@@ -73,8 +75,11 @@ def ans_check(question, equal, lower, higher):
           print("The formula is: b^2 - 4ac")
         else:
           print(error)
+          num_list.append(start)
           wrong_list.append(equation)
+          answer.append(display)
           incorrect += 1
+          print()
           return response
       except ValueError:
         print(error)
@@ -83,7 +88,9 @@ def ans_check(question, equal, lower, higher):
 equal = ["=", "equal", "e"]   # Used if discriminant is 0
 lower = ["<", "lower", "l"]   # Used if discriminant is < 0
 higher = [">", "higher", "h"]   # Used if discriminant is > 0
+answer = []   # Collect discriminant values
 wrong_list = []   # Collect incorrect questions
+num_list = []
 incorrect = 0
 start = 1
 # Basic introduction and explanation
@@ -103,21 +110,28 @@ while start != max_question + 1:
   num_3 = random.randint(2, 9)
   # Display round number and max
   rounds = math_statement("* Question {} of {} *".format(start, max_question), "*")
-  start += 1
   # Display question to solve (find discriminant) but replace 1 with blank
   equation = "{}x^2 + {}x + {} = 0".format(num_1, num_2, num_3)
   print(equation.replace("1", ""))
   dis = math.pow(num_2, 2) - 4 * (num_1 * num_3)  
-
   # Get user input (answer)
   user_input = ans_check("What is the discriminant? ", equal, lower, higher)
-print()
+  start += 1
+
 # Find number of questions answered correctly
 correct = max_question - incorrect
-print("You got these incorrect:")
-# Print incorrect questions
-for item in wrong_list:
-  print(item)
-
+print("Finding incorrect questions. Please wait...")    # I only put this in because I thought it was cool
+time.sleep(5)
+if correct != max_question:
+  print("You got these incorrect:")
+  print()
+  # Print incorrect questions
+  show = zip(num_list, wrong_list, answer)
+  for item in show:
+    print(*item, sep = " | \t ")
+else:
+  print("No incorrect questions found...👍")
+print()
 # Print percentage of questions answered correctly
 print("You scored {:.0f}%".format(correct/max_question * 100))
+print("Thank you for finishing the test. Keep studying o(*^▽^*)┛")
