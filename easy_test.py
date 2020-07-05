@@ -138,8 +138,8 @@ while keep_going == "":
     time.sleep(2)
     print()
     # Print incorrect questions
-    show = zip(num_list, wrong_list, answer)
-    for item in show:
+    to_show = zip(num_list, wrong_list, answer)
+    for item in to_show:
       print(*item, sep = " | \t ")
   else:
     # No incorrect questions answered
