@@ -150,7 +150,6 @@ while keep_going == "":
   # Ask user if they would like to do the test again
   keep_going = input("Press <enter> to take the test again or any key to quit. ")
   # Clear console and lists (Clearing console was to improve aesthetics)
-  
   if keep_going == "":
     clear = lambda: os.system('clear')    # Clears console; better aesthetics
     clear()
