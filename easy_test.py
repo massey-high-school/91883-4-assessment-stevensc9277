@@ -101,9 +101,15 @@ x = wrap(text, 39)
 for i in range(len(x)):
     print(x[i])
 print()
+# What is the discriminant?
+text_2 = 'If you are wondering, the discriminant tells us whether there are two solutions, one solution, or no solutions for finding the values of x or any other variable in a quadratic equation. For example, 2x^2 + 4x + 2 = 0. The discriminant (using the formula b^2 - 4ac) is 0, therefore x has only one possible value. If asked a question like this, you would be expected to type "e" ,"equal" or "=" since the discriminant is equal to 0.'
+x = wrap(text_2, 41)
+for i in range(len(x)):
+  print(x[i])
+print()
 # Show user how to answer questions
-text_2 = 'When answering a question please type either <, > or =. You may also use "equal", "lower", "higher" or just the first letters of each option.'
-x = wrap(text_2, 39)
+text_3 = 'When answering a question please type either <, > or =. You may also use "equal", "lower", "higher" or just the first letters of each option.'
+x = wrap(text_3, 39)
 for i in range(len(x)):
   print(x[i])
 print()
@@ -111,7 +117,7 @@ print()
 keep_going = ""
 while keep_going == "":
   # Get number of questions
-  max_question = num_check("How many questions do you want to do? ", 5, 50)
+  max_question = num_check("How many questions would you like to do? ", 5, 50)
   # Ask user to get ready (For fun)
   print("Generating questions. Please get ready...")
   time.sleep(3)
