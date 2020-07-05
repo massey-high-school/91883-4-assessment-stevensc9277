@@ -7,6 +7,7 @@ authors = ["repl.it user <replituser@example.com>"]
 [tool.poetry.dependencies]
 python = "^3.8"
 textwrap3 = "^0.9.2"
+replit = "^1.2.11"
 
 [tool.poetry.dev-dependencies]
 

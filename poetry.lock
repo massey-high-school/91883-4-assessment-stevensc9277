@@ -1,5 +1,13 @@
 [[package]]
 category = "main"
+description = "A package for repl.it that allows you to clear the console and play audio."
+name = "replit"
+optional = false
+python-versions = "*"
+version = "1.2.11"
+
+[[package]]
+category = "main"
 description = "textwrap from Python 3.6 backport (plus a few tweaks)"
 name = "textwrap3"
 optional = false
@@ -7,10 +15,13 @@ python-versions = "*"
 version = "0.9.2"
 
 [metadata]
-content-hash = "7a081f7491b047d043b75a7ecd71a0780fa2c8f77c05fb5215356ec76443c32e"
+content-hash = "047cd3f2ae651fb32dca690366b6729c32f831695b54963b38da2a624e5a1157"
 python-versions = "^3.8"
 
 [metadata.files]
+replit = [
+    {file = "replit-1.2.11-py3-none-any.whl", hash = "sha256:85509300137c57e9bc8a1e6cdd4b0a1c790e0a590852499b8aae22226658f238"},
+]
 textwrap3 = [
     {file = "textwrap3-0.9.2-py2.py3-none-any.whl", hash = "sha256:bf5f4c40faf2a9ff00a9e0791fed5da7415481054cef45bb4a3cfb1f69044ae0"},
     {file = "textwrap3-0.9.2.zip", hash = "sha256:5008eeebdb236f6303dcd68f18b856d355f6197511d952ba74bc75e40e0c3414"},
