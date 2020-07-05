@@ -107,9 +107,10 @@ x = wrap(text_2, 39)
 for i in range(len(x)):
   print(x[i])
 print()
-# Get number of questions
+# Loops program if wanted
 keep_going = ""
 while keep_going == "":
+  # Get number of questions
   max_question = num_check("How many questions do you want to do? ", 5, 50)
   # Ask user to get ready (For fun)
   print("Generating questions. Please get ready...")
@@ -141,11 +142,14 @@ while keep_going == "":
     for item in show:
       print(*item, sep = " | \t ")
   else:
+    # No incorrect questions answered
     print("No incorrect questions found...👍")
   print()
   # Print percentage of questions answered correctly
   score = math_statement("* You scored {:.0f}%  *".format(correct/max_question * 100), "*")
+  # Ask user if they would like to do the test again
   keep_going = input("Press <enter> to take the test again or any key to quit. ")
+  # Clear console and lists (Clearing console was to improve aesthetics)
   if keep_going == "":
     replit.clear()    # Clear console. Improves aesthetics
     start = 1
@@ -154,4 +158,5 @@ while keep_going == "":
     wrong_list = []
     answer = []
 print()
+# End message
 print("Thank you for finishing the test. Keep studying o(*^▽ ^*)┛")
