@@ -6,7 +6,7 @@
 import random
 import math 
 import time   # I thought this would look cool
-import replit
+import os
 from textwrap3 import wrap
 
 # Statement generator
@@ -150,8 +150,10 @@ while keep_going == "":
   # Ask user if they would like to do the test again
   keep_going = input("Press <enter> to take the test again or any key to quit. ")
   # Clear console and lists (Clearing console was to improve aesthetics)
+  
   if keep_going == "":
-    replit.clear()    # Clear console. Improves aesthetics
+    clear = lambda: os.system('clear')    # Clears console; better aesthetics
+    clear()
     start = 1
     incorrect = 0
     num_list = []
